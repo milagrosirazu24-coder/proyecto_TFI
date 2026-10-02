@@ -1,4 +1,5 @@
 from validaciones import OpcionInvalida, validar_opcion_menu
+from inventario import alta_producto, cargar_herramientas
 
 
 inventario = []                                                                   # Crea una lista vacía para almacenar los datos del inventario
@@ -20,7 +21,7 @@ while opcion != 7:
         validar_opcion_menu(opcion)                          # Valida que el número ingresado corresponda a una opción del menú
 
         if opcion == 1:
-            pass
+            cargar_herramientas(inventario)
 
         elif opcion == 2:
             pass
@@ -32,7 +33,7 @@ while opcion != 7:
             pass
 
         elif opcion == 5:
-            pass
+            alta_producto(inventario)
 
         elif opcion == 6:
             pass
