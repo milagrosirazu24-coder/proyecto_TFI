@@ -1,5 +1,6 @@
 from validaciones import validar_opcion_menu
-from inventario import alta_producto, cargar_herramientas, mostrar_inventario, consultar_stock, reporte_agotados
+from inventario import alta_producto, cargar_herramientas, mostrar_inventario, consultar_stock, reporte_agotados, actualizar_stock
+
 
 inventario = []                                                                   # Crea una lista vacía para almacenar los datos del inventario
 
@@ -35,7 +36,7 @@ while opcion != 7:
             alta_producto(inventario)
 
         elif opcion == 6:
-            pass
+            actualizar_stock(inventario)
 
         elif opcion == 7:
             print("Saliendo del sistema.")
