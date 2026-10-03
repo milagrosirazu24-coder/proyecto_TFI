@@ -1,6 +1,5 @@
-from validaciones import OpcionInvalida, validar_opcion_menu
-from inventario import alta_producto, cargar_herramientas
-
+from validaciones import validar_opcion_menu
+from inventario import alta_producto, cargar_herramientas, mostrar_inventario, consultar_stock, reporte_agotados
 
 inventario = []                                                                   # Crea una lista vacía para almacenar los datos del inventario
 
@@ -24,13 +23,13 @@ while opcion != 7:
             cargar_herramientas(inventario)
 
         elif opcion == 2:
-            pass
+            mostrar_inventario(inventario)
 
         elif opcion == 3:
-            pass
+            consultar_stock(inventario)
 
         elif opcion == 4:
-            pass
+            reporte_agotados(inventario)
 
         elif opcion == 5:
             alta_producto(inventario)
@@ -41,9 +40,6 @@ while opcion != 7:
         elif opcion == 7:
             print("Saliendo del sistema.")
 
-    except ValueError:                                       # Captura el error cuando el valor ingresado no puede convertirse a un número entero
-        print("Error: Debe ingresar un número entero.")
-
-    except OpcionInvalida as e:                              # Captura el error cuando el número ingresado no corresponde a una opción válida del menú
+    except ValueError as e:                                   # Captura los errores de valor producidos durante la ejecución
         print(f"Error: {e}")
 

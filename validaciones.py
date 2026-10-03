@@ -14,4 +14,4 @@ def validar_opcion_menu(numero):
     if numero < 1 or numero > 7:
         raise OpcionInvalida("Debe ingresar un número del 1 al 7.")
 
-    return True
+    return True 

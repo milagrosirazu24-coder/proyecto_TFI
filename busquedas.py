@@ -1,7 +1,16 @@
 # busquedas.py
 
 def buscar_herramienta(inventario, nombre):
-    for producto in inventario:  # Recorre cada elemento (diccionario) dentro de la lista inventario
-        if producto['herramienta'].lower() == nombre.strip().lower():  # Compara el nombre normalizado (sin importar mayúsculas)
-            return True  # Retorna True si encuentra la herramienta
-    return False  # Retorna False si el bucle termina y no la encontró
+    '''
+    Busca una herramienta por su nombre dentro del inventario.
+    Argumento:
+    inventario: lista que contiene las herramientas registradas y sus cantidades.
+    nombre: str que representa el nombre de la herramienta a buscar.
+    Valor de retorno:
+    Retorna el diccionario de la herramienta si se encuentra registrada y None si no se encuentra.
+    '''
+    for producto in inventario:
+        if producto['herramienta'].lower() == nombre.strip().lower():
+            return producto
+
+    return None
