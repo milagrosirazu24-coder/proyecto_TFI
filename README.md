@@ -19,3 +19,5 @@
 
 ## Estructura del Repositorio
 Este repositorio aloja la documentación técnica y la evidencia de control de versiones requerida para la Entrega N.º 4 de la asignatura.
+
+* Estado del proyecto: Módulo operativo y validado.
